@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trentahin Essentials | Everyday Comfort Products</title>
+
+    <meta name="description" content="Trentahin Essentials provides familiar products for everyday comfort, relaxation, and soothing relief, including Katinko, White Flower, and Efficascent.">
+
+    <meta name="keywords" content="Trentahin Essentials, Katinko, White Flower, Efficascent, comfort products, relaxation products, soothing products">
+
+    <meta name="author" content="Trentahin Essentials">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://yourwebsite.com/">
+
+    <meta property="og:title" content="Trentahin Essentials | Everyday Comfort Products">
+    <meta property="og:description" content="Explore Trentahin Essentials and our selection of familiar products for everyday comfort and relaxation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:image" content="https://yourwebsite.com/tranquility-essentials.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f3ed;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4f6f52;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 70px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            color: #35543a;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            display: block;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #4f6f52;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #35543a;
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #35543a;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            background: white;
+        }
+
+        .search-container input:focus {
+            border-color: #4f6f52;
+            box-shadow: 0 0 5px rgba(79, 111, 82, 0.3);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            color: #4f6f52;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .product p {
+            color: #555;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            color: #777;
+            margin-top: 25px;
+            font-size: 17px;
+        }
+
+        .about {
+            background: #e4eadf;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        footer {
+            background: #4f6f52;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 18px 5%;
+            }
+
+            header h1 {
+                font-size: 21px;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 50px 6%;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero img {
+                max-width: 100%;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .product {
+                max-width: 400px;
+                margin: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Trentahin Essentials</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div>
+                <h2>Simple Care for Everyday Comfort</h2>
+
+                <p>
+                    Trentahin Essentials provides familiar products
+                    for everyday comfort and relaxation.
+                </p>
+
+                <a href="#products" class="btn">
+                    View Products
+                </a>
+            </div>
+
+            <div>
+                <img src="tranquility-essentials.jpg"
+                     alt="Trentahin Essentials products">
+            </div>
+
+        </section>
+
+        <section id="products">
+
+            <h2>Our Products</h2>
+
+            <div class="search-container">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                    onkeyup="searchProducts()">
+
+            </div>
+
+            <div class="products" id="productList">
+
+                <div class="product">
+
+                    <img src="katinko.jpg"
+                         alt="Katinko balm product">
+
+                    <h3>Katinko</h3>
+
+                    <p>
+                        For everyday comfort and soothing relief.
+                    </p>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="white-flower.jpg"
+                         alt="White Flower oil product">
+
+                    <h3>White Flower</h3>
+
+                    <p>
+                        A familiar product for a refreshing feeling.
+                    </p>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="efficascent.jpg"
+                         alt="Efficascent oil product">
+
+                    <h3>Efficascent</h3>
+
+                    <p>
+                        For everyday massage and comfort.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p class="no-results" id="noResults">
+                No products found.
+            </p>
+
+        </section>
+
+        <section class="about" id="about">
+
+            <h2>About Us</h2>
+
+            <p>
+                Trentahin Essentials is a simple online resource
+                featuring selected products for everyday comfort
+                and relaxation.
+            </p>
+
+        </section>
+
+        <section class="contact" id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>Email: [Your Email]</p>
+            <p>Phone: [Your Phone Number]</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; 2026 Trentahin Essentials. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+
+        function searchProducts() {
+
+            const searchInput =
+                document.getElementById("searchInput");
+
+            const searchValue =
+                searchInput.value.toLowerCase().trim();
+
+            const products =
+                document.querySelectorAll(".product");
+
+            const noResults =
+                document.getElementById("noResults");
+
+            let found = false;
+
+            products.forEach(function(product) {
+
+                const productName =
+                    product.querySelector("h3")
+                    .textContent
+                    .toLowerCase();
+
+                const productDescription =
+                    product.querySelector("p")
+                    .textContent
+                    .toLowerCase();
+
+                if (
+                    productName.includes(searchValue) ||
+                    productDescription.includes(searchValue)
+                ) {
+
+                    product.style.display = "block";
+                    found = true;
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+            if (found) {
+
+                noResults.style.display = "none";
+
+            } else {
+
+                noResults.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+  
