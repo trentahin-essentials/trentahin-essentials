@@ -1,335 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Trentahin Essentials | Your Everyday Must-Haves</title>
-
-    <meta name="description" content="Trentahin Essentials brings your favorite everyday essentials, including Katinko, White Flower, Efficascent Oil, and our 3-in-1 bundle, all in one convenient place.">
-    <meta name="keywords" content="Trentahin Essentials, Katinko, White Flower, Efficascent Oil, everyday essentials, comfort products">
-    <meta name="author" content="Trentahin Essentials">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#173e60">
+    <meta name="description" content="Trentahin Essentials offers everyday essentials including Katinko, White Flower, and Efficascent Oil.">
+    <meta name="keywords" content="Trentahin Essentials, Katinko, White Flower, Efficascent Oil, everyday essentials">
+    <meta name="author" content="Jason Puday">
+    <meta name="theme-color" content="#4f6f52">
+    <title>Trentahin Essentials | Everyday Essentials</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f8fc;
-            color: #243447;
-            line-height: 1.7;
-            overflow-wrap: break-word;
+            background-color: #f7f3ed;
+            color: #263528;
+            line-height: 1.6;
         }
 
         img {
-            display: block;
             max-width: 100%;
-            height: auto;
+            display: block;
         }
 
         a {
+            color: inherit;
             text-decoration: none;
         }
 
-        a:focus-visible,
-        summary:focus-visible {
-            outline: 3px solid #b86a16;
-            outline-offset: 4px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
         header {
-            background: #173e60;
+            background-color: #4f6f52;
             color: white;
-            padding: 18px 0;
+            padding: 15px 7%;
         }
 
-        .header-content {
+        .navbar {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 25px;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .logo {
+        .brand {
             display: flex;
             align-items: center;
             gap: 12px;
-            color: white;
         }
 
-        .logo img {
+        .brand img {
             width: 55px;
             height: 55px;
             object-fit: contain;
+            border-radius: 50%;
         }
 
-        .logo span {
-            font-size: 24px;
-            font-weight: bold;
+        .brand h2 {
+            font-size: 21px;
         }
 
         nav {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 22px;
+            gap: 20px;
         }
 
         nav a {
-            color: white;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bold;
         }
 
         nav a:hover {
-            text-decoration: underline;
-            text-underline-offset: 5px;
+            color: #e4eadf;
         }
 
         .hero {
-            background: #e4edf6;
-            padding: 90px 0;
-        }
-
-        .hero-content {
+            min-height: 470px;
+            padding: 65px 7%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 1fr;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
+            background-color: #e4eadf;
         }
 
-        .hero-text h1 {
-            color: #173e60;
+        .hero h1 {
             font-size: clamp(32px, 4vw, 48px);
             line-height: 1.2;
-            margin-bottom: 22px;
+            color: #35543a;
+            margin-bottom: 20px;
         }
 
-        .hero-text p {
-            font-size: 17px;
-            margin-bottom: 18px;
+        .hero p {
+            margin-bottom: 25px;
+            max-width: 550px;
         }
 
-        .hero-image img {
+        .hero img {
             width: 100%;
-            aspect-ratio: 4 / 3;
+            max-height: 350px;
             object-fit: contain;
-            background: white;
             border-radius: 15px;
         }
 
         .btn {
             display: inline-block;
-            background: #173e60;
+            background-color: #35543a;
             color: white;
-            padding: 13px 26px;
-            border-radius: 7px;
+            padding: 12px 24px;
+            border-radius: 6px;
             font-weight: bold;
-            margin-top: 12px;
         }
 
         .btn:hover {
-            background: #0c2942;
+            background-color: #263f2a;
         }
 
         section {
-            padding: 75px 0;
+            padding: 65px 7%;
+            scroll-margin-top: 20px;
         }
 
         .section-title {
-            font-size: clamp(28px, 3vw, 36px);
-            line-height: 1.3;
             text-align: center;
-            color: #173e60;
-            margin-bottom: 15px;
+            color: #35543a;
+            font-size: 32px;
+            margin-bottom: 12px;
         }
 
-        .section-subtitle {
-            font-size: 17px;
+        .section-description {
             text-align: center;
-            max-width: 720px;
-            margin: 0 auto 40px;
-        }
-
-        .about {
-            background: white;
+            max-width: 700px;
+            margin: 0 auto 35px;
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
+            max-width: 1050px;
+            margin: auto;
         }
 
-        .about-image img {
+        .about-content img {
             width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-            border-radius: 15px;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 12px;
         }
 
-        .about-text h2 {
-            color: #173e60;
-            font-size: 34px;
-            line-height: 1.3;
-            margin-bottom: 12px;
-        }
-
-        .about-text h3 {
-            color: #244e73;
-            font-size: 23px;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            font-size: 17px;
+        .about-content h3 {
+            font-size: 27px;
+            color: #35543a;
             margin-bottom: 15px;
         }
 
-        .tagline {
-            color: #173e60;
-            font-weight: bold;
+        .about-content p {
+            margin-bottom: 15px;
         }
 
-        .products {
-            background: #f5f8fc;
+        #products {
+            background-color: #e4eadf;
         }
 
         .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 25px;
-        }
-
-        .product-card {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            text-align: center;
-            border: 1px solid #d8e3ee;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-        }
-
-        .product-image {
-            background: #edf3f9;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 210px;
-            object-fit: contain;
-        }
-
-        .product-card h3 {
-            font-size: 23px;
-            color: #173e60;
-            margin-bottom: 12px;
-        }
-
-        .product-card p {
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #173e60;
-            margin: 15px 0;
-        }
-
-        .product-card .btn {
-            margin-top: 10px;
-        }
-
-        .bundle {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            text-align: left;
-            gap: 35px;
-            padding: 35px;
-            background: #e4edf6;
-        }
-
-        .bundle .product-image {
-            margin-bottom: 0;
-            background: white;
-        }
-
-        .bundle .product-image img {
-            height: 280px;
-        }
-
-        .bundle h3 {
-            font-size: 29px;
-        }
-
-        .how-to-order {
-            background: white;
-        }
-
-        .steps-grid {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 22px;
         }
 
-        .step {
-            background: #e4edf6;
+        .product-card {
+            background-color: white;
             border-radius: 12px;
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: #35543a;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            display: block;
+            color: #35543a;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .order-steps {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .step {
+            background-color: white;
+            padding: 25px 18px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 4px solid #4f6f52;
         }
 
         .step-number {
+            width: 45px;
+            height: 45px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            width: 55px;
-            height: 55px;
-            background: #173e60;
-            color: white;
+            align-items: center;
+            margin: 0 auto 15px;
             border-radius: 50%;
-            font-size: 23px;
+            background-color: #4f6f52;
+            color: white;
+            font-size: 20px;
             font-weight: bold;
-            margin: 0 auto 20px;
         }
 
         .step h3 {
-            font-size: 19px;
-            color: #173e60;
+            color: #35543a;
             margin-bottom: 10px;
         }
 
-        .step p {
-            font-size: 15px;
-        }
-
-        .faq {
-            background: #f5f8fc;
+        #faq {
+            background-color: #e4eadf;
         }
 
         .faq-list {
@@ -338,211 +253,131 @@
         }
 
         .faq-item {
-            background: white;
-            border: 1px solid #d8e3ee;
-            border-radius: 10px;
+            background-color: white;
             margin-bottom: 15px;
-            overflow: hidden;
+            padding: 20px;
+            border-radius: 8px;
         }
 
-        .faq-item summary {
-            cursor: pointer;
-            padding: 20px 25px;
-            font-weight: bold;
-            color: #173e60;
-            font-size: 17px;
+        .faq-item h3 {
+            color: #35543a;
+            margin-bottom: 8px;
+            font-size: 18px;
         }
 
-        .faq-item p {
-            padding: 0 25px 22px;
-            font-size: 16px;
-        }
-
-        .contact {
-            background: #e4edf6;
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
             text-align: center;
         }
 
-        .contact-box {
-            max-width: 650px;
-            background: white;
-            margin: 30px auto 0;
-            padding: 40px;
-            border-radius: 14px;
-            border: 1px solid #d8e3ee;
+        .contact-details {
+            margin: 25px 0;
         }
 
-        .contact-box h3 {
-            color: #173e60;
-            font-size: 23px;
-            margin-bottom: 20px;
-        }
-
-        .contact-box p {
-            font-size: 17px;
-            margin-bottom: 12px;
-        }
-
-        .contact-box a {
-            color: #173e60;
-            text-decoration: underline;
+        .contact-details p {
+            margin: 12px 0;
             overflow-wrap: anywhere;
         }
 
-        .credits {
-            background: white;
-            padding: 40px 0;
-        }
-
-        .credits h2 {
-            color: #173e60;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .credits p {
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
         footer {
-            background: #173e60;
+            background-color: #35543a;
             color: white;
-            padding: 25px 15px;
             text-align: center;
+            padding: 25px 7%;
         }
 
         footer p {
+            margin: 5px 0;
             font-size: 14px;
         }
 
-        @media (max-width: 992px) {
-            .header-content {
-                flex-direction: column;
-            }
+        .image-credits {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.35);
+            font-size: 12px;
+        }
 
-            .hero-content,
-            .about-content {
-                gap: 30px;
-            }
-
+        @media (max-width: 900px) {
             .product-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .steps-grid {
+            .order-steps {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .hero {
-                padding: 65px 0;
+                gap: 25px;
             }
         }
 
-        @media (max-width: 700px) {
-            .container {
-                width: 92%;
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 5%;
             }
 
-            .logo span {
-                font-size: 21px;
+            .navbar {
+                justify-content: center;
             }
 
-            nav {
-                gap: 13px;
-            }
-
-            nav a {
-                font-size: 14px;
-            }
-
-            section {
-                padding: 55px 0;
-            }
-
-            .hero {
-                padding: 50px 0;
-            }
-
-            .hero-content,
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-text,
-            .about-text {
-                text-align: center;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .hero-image img {
-                max-width: 450px;
-                margin: auto;
-            }
-
-            .about-image img {
-                max-width: 450px;
-                margin: auto;
-            }
-
-            .about-text h2 {
-                font-size: 29px;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-card {
+            .brand {
+                justify-content: center;
                 width: 100%;
-                max-width: 450px;
-                margin: auto;
-            }
-
-            .bundle {
-                grid-column: auto;
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding: 25px;
-            }
-
-            .bundle .product-image img {
-                height: 220px;
-            }
-
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box {
-                padding: 25px 18px;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .logo span {
-                font-size: 19px;
             }
 
             nav {
-                gap: 10px;
+                justify-content: center;
+                gap: 12px 16px;
             }
 
             nav a {
                 font-size: 13px;
             }
 
-            .product-card {
-                padding: 18px;
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 45px 5%;
+                text-align: center;
             }
-        }
 
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero img {
+                max-height: 260px;
+            }
+
+            section {
+                padding: 45px 5%;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .about-content h3 {
+                font-size: 23px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card img {
+                height: 210px;
+            }
+
+            .order-steps {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -551,420 +386,192 @@
 <body>
 
     <header>
-        <div class="container header-content">
-
-            <a href="#home" class="logo">
-                <img
-                    src="trentahin-logo.png"
-                    alt="Trentahin Essentials business logo"
-                    width="55"
-                    height="55"
-                >
-                <span>Trentahin Essentials</span>
+        <div class="navbar">
+            <a class="brand" href="#home" aria-label="Trentahin Essentials home">
+                <img src="trentahin-logo.png" alt="Trentahin Essentials logo">
+                <h2>Trentahin Essentials</h2>
             </a>
 
             <nav aria-label="Main navigation">
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#products">Products</a>
-                <a href="#order">How to Order</a>
+                <a href="#how-to-order">How to Order</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </nav>
-
         </div>
     </header>
 
     <main>
-
         <section class="hero" id="home">
-            <div class="container hero-content">
-
-                <div class="hero-text">
-
-                    <h1>
-                        The Essentials You Need,
-                        The Convenience You Love
-                    </h1>
-
-                    <p>
-                        Your everyday essentials, all in one place.
-                        Discover trusted household favorites that
-                        make your daily routine more convenient.
-                    </p>
-
-                    <p>
-                        Your everyday favorites are just a click away.
-                        We make it easier for you to explore the
-                        essentials you know and love.
-                    </p>
-
-                    <a href="#products" class="btn">
-                        Shop Our Essentials
-                    </a>
-
-                </div>
-
-                <div class="hero-image">
-                    <img
-                        src="home-products.webp"
-                        alt="Trentahin Essentials everyday products including Katinko, White Flower and Efficascent Oil"
-                        width="520"
-                        height="390"
-                        fetchpriority="high"
-                    >
-                </div>
-
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <div class="container about-content">
-
-                <div class="about-image">
-                    <img
-                        src="about-products.webp"
-                        alt="Collection of everyday essentials offered by Trentahin Essentials"
-                        width="500"
-                        height="375"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="about-text">
-
-                    <h2>About Us</h2>
-
-                    <h3>
-                        Trentahin Essentials —
-                        Your Everyday Must-Haves!
-                    </h3>
-
-                    <p>
-                        At Trentahin Essentials, we bring you
-                        your favorite everyday essentials,
-                        such as Efficascent Oil, White Flower,
-                        and Katinko, all in one convenient place.
-                    </p>
-
-                    <p class="tagline">
-                        Trentahin Essentials —
-                        Small Essentials, Everyday Comfort!
-                    </p>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="products" id="products">
-            <div class="container">
-
-                <h2 class="section-title">
-                    Our Products
-                </h2>
-
-                <p class="section-subtitle">
-                    Your everyday comfort essentials.
-                    Explore our products for your
-                    personal comfort needs.
+            <div>
+                <h1>The Essentials You Need, The Convenience You Love</h1>
+                <p>
+                    Your every day essentials, all in one place. Discover trusted
+                    household favorites that make your daily routine more convenient.
+                    Your everyday favorites are just a click away, we make it easier
+                    for you to explore the essentials you know and love.
                 </p>
+                <a href="#products" class="btn">Explore Products</a>
+            </div>
 
-                <div class="product-grid">
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            <img
-                                src="katinko.webp"
-                                alt="Katinko product packaging"
-                                width="300"
-                                height="220"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <h3>Katinko</h3>
-
-                        <p>
-                            Your everyday comfort essential.
-                            Explore Katinko products for
-                            your personal comfort needs.
-                        </p>
-
-                        <div class="price">
-                            ₱70.00
-                        </div>
-
-                        <a href="#contact" class="btn">
-                            Order Now
-                        </a>
-
-                    </article>
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            <img
-                                src="white-flower.webp"
-                                alt="White Flower medicated oil bottle"
-                                width="300"
-                                height="220"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <h3>White Flower</h3>
-
-                        <p>
-                            A classic essential for your
-                            everyday needs. Keep your
-                            favorite medicated oil handy
-                            whenever needed.
-                        </p>
-
-                        <div class="price">
-                            ₱69.00
-                        </div>
-
-                        <a href="#contact" class="btn">
-                            Order Now
-                        </a>
-
-                    </article>
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            <img
-                                src="efficascent.webp"
-                                alt="Efficascent massage oil bottle"
-                                width="300"
-                                height="220"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <h3>Efficascent Oil</h3>
-
-                        <p>
-                            An everyday massage oil for
-                            your comfort routine.
-                            A familiar favorite for
-                            a relaxing massage.
-                        </p>
-
-                        <div class="price">
-                            ₱59.00
-                        </div>
-
-                        <a href="#contact" class="btn">
-                            Order Now
-                        </a>
-
-                    </article>
-<article class="product-card bundle">
-
-                        <div class="product-image">
-                            <img
-                                src="essentials-bundle.webp"
-                                alt="Three-in-one essentials bundle featuring Katinko, White Flower and Efficascent Oil"
-                                width="500"
-                                height="280"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div>
-                            <h3>
-                                3-in-1 Everyday Essentials Bundle
-                            </h3>
-
-                            <p>
-                                Perfect for keeping your
-                                everyday favorites together.
-                            </p>
-
-                            <p>
-                                Enjoy Katinko, White Flower,
-                                and Efficascent Oil in one
-                                convenient bundle.
-                            </p>
-
-                            <div class="price">
-                                ₱189.00
-                            </div>
-
-                            <a href="#contact" class="btn">
-                                Order Bundle
-                            </a>
-                        </div>
-
-                    </article>
-
-                </div>
+            <div>
+                <img src="home-products.webp" alt="Everyday essential products available at Trentahin Essentials">
             </div>
         </section>
 
-        <section class="how-to-order" id="order">
-            <div class="container">
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-description">
+                Your Everyday Must-Haves!
+            </p>
 
-                <h2 class="section-title">
-                    How to Order
-                </h2>
+            <div class="about-content">
+                <img src="about-products.webp" alt="A selection of everyday comfort essentials">
 
-                <p class="section-subtitle">
-                    Ordering your everyday essentials
-                    is simple. Just follow these four steps.
-                </p>
-
-                <div class="steps-grid">
-
-                    <article class="step">
-                        <div class="step-number">1</div>
-
-                        <h3>Choose Your Products</h3>
-
-                        <p>
-                            Browse our products and
-                            select the essentials
-                            you want to order.
-                        </p>
-                    </article>
-
-                    <article class="step">
-                        <div class="step-number">2</div>
-
-                        <h3>Contact Us to Order</h3>
-
-                        <p>
-                            Reach out through our
-                            email or phone number
-                            to place your order.
-                        </p>
-                    </article>
-
-                    <article class="step">
-                        <div class="step-number">3</div>
-
-                        <h3>Confirm Your Order</h3>
-
-                        <p>
-                            Confirm your selected
-                            products and order details
-                            with us.
-                        </p>
-                    </article>
-
-                    <article class="step">
-                        <div class="step-number">4</div>
-
-                        <h3>Receive Your Order</h3>
-
-                        <p>
-                            Receive your order
-                            according to the
-                            confirmed arrangements.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="faq" id="faq">
-            <div class="container">
-
-                <h2 class="section-title">
-                    Frequently Asked Questions
-                </h2>
-
-                <p class="section-subtitle">
-                    Have questions?
-                    We're here to help!
-                </p>
-
-                <div class="faq-list">
-
-                    <details class="faq-item">
-                        <summary>
-                            What products do you offer?
-                        </summary>
-
-                        <p>
-                            We feature Katinko,
-                            White Flower, Efficascent Oil,
-                            and a 3-in-1 Everyday
-                            Essentials Bundle.
-                        </p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>
-                            How can I place an order?
-                        </summary>
-
-                        <p>
-                            Choose your preferred products,
-                            contact us through email or phone,
-                            and confirm your order details.
-                        </p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>
-                            How much are your products?
-                        </summary>
-
-                        <p>
-                            Katinko costs ₱70,
-                            White Flower costs ₱69,
-                            Efficascent Oil costs ₱59,
-                            and our 3-in-1 bundle
-                            costs ₱189.
-                        </p>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary>
-                            How can I contact
-                            Trentahin Essentials?
-                        </summary>
-
-                        <p>
-                            You can email us at
-                            trentahinessentials@gmail.com
-                            or call 09605654466.
-                        </p>
-                    </details>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <div class="container">
-
-                <h2 class="section-title">
-                    Contact Us
-                </h2>
-
-                <p class="section-subtitle">
-                    Have questions or want to order?
-                    Get in touch with Trentahin Essentials!
-                </p>
-
-                <div class="contact-box">
-
+                <div>
                     <h3>Trentahin Essentials</h3>
+                    <p>
+                        At Trentahin Essentials, we bring you your favorite everyday
+                        essentials, such as Efficascent Oil, White Flower, and Katinko,
+                        all in one convenient place.
+                    </p>
+                    <p>
+                        Our goal is to make it easier for you to explore familiar
+                        everyday products in one convenient place.
+                    </p>
+                    <p><strong>Trentahin Essentials — Small Essentials, Everyday Comfort!</strong></p>
+                    <a href="#products" class="btn">View Our Products</a>
+                </div>
+            </div>
+        </section>
 
+        <section id="products">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-description">
+                Your everyday comfort essentials. Explore Katinko products for your personal comfort needs.
+            </p>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="katinko.png" alt="Katinko everyday comfort product">
+                    <h3>Katinko</h3>
+                    <p>An everyday essential for your personal comfort needs.</p>
+                    <span class="price">₱70</span>
+                    <a class="btn" href="#contact">Order Now</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="white-flower.png" alt="White Flower medicated oil">
+                    <h3>White Flower</h3>
+                    <p>A classic essential for your everyday needs. Keep your favorite medicated oil handy whenever needed.</p>
+                    <span class="price">₱69</span>
+                    <a class="btn" href="#contact">Order Now</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="efficascent.png" alt="Efficascent Oil massage oil">
+                    <h3>Efficascent Oil</h3>
+                    <p>An everyday massage oil for your comfort routine. A familiar favorite for a relaxing massage.</p>
+                    <span class="price">₱59</span>
+                    <a class="btn" href="#contact">Order Now</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="essentials-bundle.webp" alt="Bundle of everyday comfort essentials">
+                    <h3>3-in-1 Bundle</h3>
+                    <p>Perfect for keeping your everyday favorites together.</p>
+                    <span class="price">₱189</span>
+                    <a class="btn" href="#contact">Order Now</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="how-to-order">
+            <h2 class="section-title">How to Order</h2>
+            <p class="section-description">
+                Ordering your everyday essentials is simple.
+            </p>
+
+            <div class="order-steps">
+                <article class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Products</h3>
+                    <p>Browse our available products and select your favorites.</p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">2</div>
+                    <h3>Contact Us to Order</h3>
+                    <p>Reach us through our email or contact number.</p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">3</div>
+                    <h3>Confirm Your Order</h3>
+                    <p>Confirm your selected products and order details with us.</p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">4</div>
+                    <h3>Receive Your Order</h3>
+                    <p>Wait for confirmation regarding your order and delivery arrangements.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">
+                Have questions? We're here to help!
+            </p>
+
+            <div class="faq-list">
+                <article class="faq-item">
+                    <h3>How can I place an order?</h3>
+                    <p>
+                        Choose the products you want, then contact us through our
+                        email address or phone number to discuss your order.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>What products are available?</h3>
+                    <p>
+                        We feature everyday essentials such as Katinko, White Flower,
+                        Efficascent Oil, and our 3-in-1 bundle.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>How can I contact Trentahin Essentials?</h3>
+                    <p>
+                        You can reach us through trentahinessentials@gmail.com
+                        or 09605654466.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>How much do the products cost?</h3>
+                    <p>
+                        Katinko costs ₱70, White Flower ₱69, Efficascent Oil ₱59,
+                        and the 3-in-1 bundle ₱189.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-description">
+                Have questions or want to place an order? Get in touch with us.
+            </p>
+
+            <div class="contact-content">
+                <div class="contact-details">
                     <p>
                         <strong>Email:</strong>
-                    </p>
-
-                    <p>
                         <a href="mailto:trentahinessentials@gmail.com">
                             trentahinessentials@gmail.com
                         </a>
@@ -972,77 +579,27 @@
 
                     <p>
                         <strong>Phone:</strong>
+                        <a href="tel:09605654466">09605654466</a>
                     </p>
-
-                    <p>
-                        <a href="tel:+639605654466">
-                            09605654466
-                        </a>
-                    </p>
-
-                    <a
-                        href="mailto:trentahinessentials@gmail.com?subject=Product%20Order%20Inquiry"
-                        class="btn"
-                    >
-                        Contact Us to Order
-                    </a>
-
                 </div>
 
+                <a class="btn" href="mailto:trentahinessentials@gmail.com">
+                    Email Us
+                </a>
             </div>
         </section>
-
-        <section class="credits" aria-labelledby="credits-heading">
-            <div class="container">
-
-                <h2 id="credits-heading">
-                    Image Credits
-                </h2>
-
-                <p>
-                    Logo: [Creator and usage rights]
-                </p>
-
-                <p>
-                    Home image: [Source and usage rights]
-                </p>
-
-                <p>
-                    About image: [Source and usage rights]
-                </p>
-
-                <p>
-                    Katinko image: [Source and usage rights]
-                </p>
-
-                <p>
-                    White Flower image: [Source and usage rights]
-                </p>
-
-                <p>
-                    Efficascent image: [Source and usage rights]
-                </p>
-
-                <p>
-                    Bundle image: [Source and usage rights]
-                </p>
-
-            </div>
-        </section>
-
     </main>
 
     <footer>
-        <p>
-            &copy; 2026 Trentahin Essentials.
-            All Rights Reserved.
-        </p>
+        <p><strong>Trentahin Essentials</strong></p>
+        <p>Small Essentials, Everyday Comfort!</p>
+        <p>&copy; 2026 Trentahin Essentials. All rights reserved.</p>
 
-        <p>
-            Small Essentials, Everyday Comfort!
-        </p>
+        <div class="image-credits">
+            <p><strong>Image Credits</strong></p>
+            <p>Replace this text with the source and license/permission details for each image used on this website.</p>
+        </div>
     </footer>
 
 </body>
-</html>
-                    
+    </html>
